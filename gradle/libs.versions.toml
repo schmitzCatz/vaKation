@@ -1,7 +1,7 @@
 [versions]
 clikt = "4.2.2"
 kotlin = "1.9.22"
-logback = "1.4.12"
+logback = "1.5.6"
 kotlin-logging = "5.1.0"
 jollyday = "0.26.0"
 threeten = "1.7.2"
