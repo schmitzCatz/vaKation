@@ -1,7 +1,5 @@
 # VaKation
 
-Foobar is a Python library for dealing with word pluralization.
-
 ## Installation
 
 Download and unzip the archive. Make sure java runtime is installed.
