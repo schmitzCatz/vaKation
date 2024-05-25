@@ -1,0 +1,11 @@
+workdays:
+  - "MONDAY"
+  - "TUESDAY"
+  - "WEDNESDAY"
+  - "THURSDAY"
+  - "FRIDAY"
+extraDays: []
+vacationDays: 30
+country:
+  code: "DE"
+  state: "NW"

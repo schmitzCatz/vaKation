@@ -1,0 +1,31 @@
+name: CI
+on:
+    push:
+        tags: ['v[0-9].[0-9]+.[0-9]+']
+jobs:
+    build:
+        permissions:
+            contents: write
+        runs-on: ubuntu-latest
+        steps:
+            - name: 🧑‍💻 Checkout Repository
+              uses: actions/checkout@v4
+            - name: ☕ Setup Java
+              uses: actions/setup-java@v4
+              with:
+                  java-version: 17
+                  distribution: 'temurin'
+            - name: ⛑️ Setup Gradle
+              uses: gradle/actions/setup-gradle@v3
+            - name: 🔧 Fix Permissions
+              run: chmod +x ./gradlew
+            - name: 🐘 Run build with Gradle
+              run: ./gradlew build
+            - name: 🚀 Release
+              uses: softprops/action-gh-release@v2
+              with:
+                  files: |
+                      ./build/distribution/*.tar
+                      ./build/distribution/*.zip
+                      ./build/libs/*-standalone.jar
+                      ./LICENSE

@@ -1,0 +1,52 @@
+[versions]
+clikt = "4.2.2"
+kotlin = "1.9.22"
+logback = "1.4.12"
+kotlin-logging = "5.1.0"
+jollyday = "0.26.0"
+threeten = "1.7.2"
+jackson = "2.16.1"
+junit-jupiter = "1.9.22"
+junit-launcher = "1.10.2"
+assertk = "0.28.0"
+mockk = "1.13.10"
+ktlint = "12.1.0"
+detekt = "1.23.4"
+
+[libraries]
+clikt = { module = "com.github.ajalt.clikt:clikt", version.ref = "clikt" }
+
+logging-logback-core = { module = "ch.qos.logback:logback-core", version.ref = "logback" }
+logging-logback-classic = { module = "ch.qos.logback:logback-classic", version.ref = "logback" }
+logging-kotlin = { module = "io.github.oshai:kotlin-logging-jvm", version.ref = "kotlin-logging" }
+
+jollyday-core = { module = "de.focus-shift:jollyday-core", version.ref = "jollyday" }
+jollyday-jackson = { module = "de.focus-shift:jollyday-jackson", version.ref = "jollyday" }
+threeten-extras = { module = "org.threeten:threeten-extra", version.ref = "threeten" }
+
+jackson-core = { module = "com.fasterxml.jackson.core:jackson-core", version.ref = "jackson" }
+jackson-kotlin = { module = "com.fasterxml.jackson.module:jackson-module-kotlin", version.ref = "jackson" }
+jackson-yaml = { module = "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml", version.ref = "jackson" }
+jackson-csv = { module = "com.fasterxml.jackson.dataformat:jackson-dataformat-csv", version.ref = "jackson" }
+jackson-jsr310 = { module = "com.fasterxml.jackson.datatype:jackson-datatype-jsr310", version.ref = "jackson" }
+
+test-kotlin = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+test-junit-params = { module = "org.junit.jupiter:junit-jupiter-params", version.ref = "junit-jupiter" }
+test-junit = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit-jupiter" }
+test-assertk = { module = "com.willowtreeapps.assertk:assertk", version.ref = "assertk" }
+test-mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
+test-launcher = { module = "org.junit.platform:junit-platform-launcher", version.ref = "junit-launcher" }
+
+[bundles]
+test = ["test-assertk", "test-junit", "test-junit-params", "test-kotlin", "test-mockk"]
+testRuntime = ["test-launcher"]
+implementation = ["clikt",
+    "logging-kotlin", "logging-logback-classic", "logging-logback-core",
+    "jollyday-core", "jollyday-jackson", "threeten-extras",
+    "jackson-core", "jackson-jsr310", "jackson-kotlin", "jackson-yaml", "jackson-csv"]
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint" }
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
+
