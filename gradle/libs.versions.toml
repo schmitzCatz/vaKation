@@ -9,7 +9,7 @@ jackson = "2.17.2"
 junit-jupiter = "5.10.3"
 junit-launcher = "1.10.3"
 assertk = "0.28.1"
-mockk = "1.13.11"
+mockk = "1.13.12"
 ktlint = "12.1.1"
 detekt = "1.23.6"
 
