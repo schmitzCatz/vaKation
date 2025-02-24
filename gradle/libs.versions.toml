@@ -11,7 +11,7 @@ junit-launcher = "1.12.0"
 assertk = "0.28.1"
 mockk = "1.13.16"
 ktlint = "12.1.2"
-detekt = "1.23.7"
+detekt = "1.23.8"
 
 [libraries]
 clikt = { module = "com.github.ajalt.clikt:clikt", version.ref = "clikt" }
