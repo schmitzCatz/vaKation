@@ -10,7 +10,7 @@ junit-jupiter = "6.0.1"
 junit-launcher = "6.0.1"
 assertk = "0.28.1"
 mockk = "1.14.6"
-ktlint = "13.1.0"
+ktlint = "14.0.1"
 detekt = "1.23.8"
 
 [libraries]
