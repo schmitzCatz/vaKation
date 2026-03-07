@@ -1,5 +1,6 @@
 [versions]
 clikt = "5.0.3"
+kotlin = "2.3.0"
 kotlin = "2.2.21"
 kotlin-logging = "7.0.14"
 logback = "1.5.25"
