@@ -1,15 +1,15 @@
 [versions]
 clikt = "5.0.3"
 kotlin = "2.2.21"
-logback = "1.5.24"
+logback = "1.5.25"
 kotlin-logging = "7.0.13"
 jollyday = "1.8.0"
 threeten = "1.8.0"
 jackson = "2.20.1"
-junit-jupiter = "6.0.1"
+junit-jupiter = "6.0.2"
 junit-launcher = "6.0.1"
 assertk = "0.28.1"
-mockk = "1.14.6"
+mockk = "1.14.7"
 ktlint = "14.0.1"
 detekt = "1.23.8"
 
